@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0,maximum-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta content="email=no" name="format-detection" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/weui.min.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/ort.js"></script>
+	<title>重制干酪（预混器）生产报告</title>
+</head>
+<body>
+	<div class="wrap">
+		<table width="100%"; border="1"; cellpadding="2"; cellspacing="1"; border-collapse:collapse; border-spacing:0; class="con">
+			<div class="report_header"><span style="float: left;">锅号：</span><span class="num">1</span></div>
+			<tr class="report_con">
+				<td class="report_conL">混料开始时间</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:25</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">添加色素.乳化盐</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:27</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">添加乳清粉/水</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:28</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">搅拌开始时间</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:29</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">搅拌结束时间</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:29</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">原料搅拌均匀一致</td>
+				<td class="report_conR" style="padding: 0 42px;">
+					<div class="weui_cell">
+      					<input class="weui_switch" type="checkbox" checked>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">显示重量</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>7:27</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">水分检测</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:27</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">PH值检测</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>7.46</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+			<tr class="report_con">
+				<td class="report_conL">料排放时间</td>
+				<td class="report_conR">
+					<div class="report_conR_con">
+      					<span class="add">+</span><i>8:27</i><span class="sub">-</span>
+    				</div>
+				</td>
+			</tr>
+		</table>
+		<div class="foot">
+			<a href="index3.html" class="weui_btn weui_btn_primary" style="font-size: 36px;">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</a>
+		</div>
+	</div>
+	<script>
+	$(function(){
+		var str1 = 1 ;
+		$(".add").click(function(){
+		var a=$(this).next("i").html();
+			var str = a.slice(a.length - 2,a.length)
+			var str2 = parseInt(str);
+			$(this).next("i").html("8:"+(str2 + str1));
+			// str1 ++;
+		})
+		$(".sub").click(function(){
+		var b=$(this).prev("i").html();
+			var str3=b.slice(b.length - 2,b.length)
+			var str4=parseInt(str3);
+			$(this).prev("i").html("8:"+(str4-str1));
+		})
+	})
+	</script>
+</body>
+</html>
